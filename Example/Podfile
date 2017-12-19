@@ -1,15 +1,13 @@
 use_frameworks!
 
 target 'MyLib_Example' do
-  pod 'MyLib', :path => '../'
-
 
   target 'MyLib_Tests' do
     inherit! :search_paths
 
     pod 'Specta'
-  pod 'Expecta'
-  pod 'FBSnapshotTestCase'
-  pod 'Expecta+Snapshots'
+    pod 'MyLib', :path => '../MyLib.podspec'
+
+
   end
 end
